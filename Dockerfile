@@ -5,7 +5,7 @@ FROM pataquets/apache-drupal
 RUN DEBIAN_FRONTEND=noniteractive \
 	echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu precise main" \
 		| tee /etc/apt/sources.list.d/git.list && \
-	apt-key adv --keyserver keyserver.ubuntu.com  --recv-keys E1DF1F24
+	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E1DF1F24
 
 RUN DEBIAN_FRONTEND=noniteractive \
 	apt-get update && \
