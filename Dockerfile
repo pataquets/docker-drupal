@@ -2,6 +2,8 @@ FROM pataquets/apache-drupal
 
 WORKDIR /var/www
 
+ONBUILD ADD drupal.make /var/www/drupal.make
+
 ONBUILD RUN \
 	rm /var/www/index.html && \
 	cd /var/www && \
