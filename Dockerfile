@@ -7,7 +7,7 @@ ONBUILD ADD drupal.make /var/www/drupal.make
 ONBUILD RUN \
 	rm /var/www/index.html && \
 	cd /var/www && \
-	drush make drupal.make .
+	drush make --no-cache drupal.make .
 
 ONBUILD RUN \
 	chown -vR www-data:www-data \
