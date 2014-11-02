@@ -7,6 +7,7 @@ ONBUILD RUN \
 	cd /var/www && \
 	drush make drupal.make .
 
-RUN chown -vR www-data:www-data \
-	/var/www/sites/all \
-	/var/www/sites/default
+ONBUILD RUN \
+	chown -vR www-data:www-data \
+		/var/www/sites/all \
+		/var/www/sites/default
