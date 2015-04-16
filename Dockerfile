@@ -1,11 +1,11 @@
-FROM pataquets/apache-drupal:precise
+FROM pataquets/apache-drupal:trusty
 
 RUN \
-  rm /var/www/index.html && \
-  cd /var/www && \
+  rm /var/www/html/index.html && \
+  cd /var/www/html && \
   git clone --single-branch --branch 7.x http://git.drupal.org/project/drupal.git .
 
 RUN \
   chown -vR www-data:www-data \
-    /var/www/sites/all \
-    /var/www/sites/default
+    /var/www/html/sites/all \
+    /var/www/html/sites/default
